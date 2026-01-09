@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import { use } from 'react';
-import { Link, NavLink } from 'react-router';
-import CategoryNews from '../Page/CategoryNews';
+import { NavLink } from 'react-router';
+
 
 const categoryPromise=fetch('../../public/demo-data/categories.json').then(res=>res.json())
 

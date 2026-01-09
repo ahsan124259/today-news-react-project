@@ -3,6 +3,7 @@ import HomeLayout from "../Layouts/HomeLayout";
 import Home from "../Page/Home";
 import CategoryNews from "../Page/CategoryNews";
 
+
   export const router=createBrowserRouter([
     {
         path:'/',
@@ -14,9 +15,10 @@ import CategoryNews from "../Page/CategoryNews";
             },
             {
                 path:"/category/:id",
-                element:<CategoryNews></CategoryNews>,
-                loader:()=>fetch('../../public/demo-data/news.json')
+                loader:()=>fetch('../../public/demo-data/news.json'),
+                element:<CategoryNews></CategoryNews>
             },
+            
             
         ]
     },
