@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router";
 import HomeLayout from "../Layouts/HomeLayout";
 import Home from "../Page/Home";
 import CategoryNews from "../Page/CategoryNews";
+import NewsDetails from "../Page/NewsDetails";
 
 
   export const router=createBrowserRouter([
@@ -23,8 +24,9 @@ import CategoryNews from "../Page/CategoryNews";
         ]
     },
     {
-        path:'/auth',
-        element:<h2>Auth lay out </h2>
+        path:'/news-details/:id',
+        loader:()=>fetch('/demo-data/news.json'),
+        element:<NewsDetails></NewsDetails>
     },
     {
         path:'/news',
